@@ -57,26 +57,7 @@ Find the "sweet spot" temperature where:
 
 Before diving into calculations, here's a conceptual sketch of what you'll discover:
 
-```
-    Energy
-      ↑
-      |     ΔH(T) ←─── slightly increases with T
-      |   ╭─────────────────────────────
-      |  ╱                            
-      | ╱                             
-   ───┼╱────────────────────────────── ← ΔH ≈ constant (small change)
-      |     
-      |     T×ΔS(T) ←─── increases rapidly with T
-   ───┼─────────╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱
-      |        ╱                      
-      |      ╱                        
-      |    ╱                          
-      |  ╱                            
-      |╱                              
-   ───┼───────────────────────────────→ Temperature
-      |
-      ↓ ΔG(T) = ΔH(T) - T×ΔS(T)
-```
+![Trapezoidal Integration](./figs/trends.png)
 
 **Key insights from this diagram:**
 - **ΔH(T)** changes slowly with temperature (small positive slope)
