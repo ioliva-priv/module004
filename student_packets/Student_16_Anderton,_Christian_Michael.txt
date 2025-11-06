@@ -1,0 +1,75 @@
+================================================================================
+MODULE 5: AMMONIA SYNTHESIS THERMODYNAMIC ANALYSIS
+Student Data Packet
+================================================================================
+
+Student Name: Anderton, Christian Michael
+Student ID: 16
+Generated: 2025-11-05
+
+--------------------------------------------------------------------------------
+REACTION: N₂(g) + 3 H₂(g) ⇌ 2 NH₃(g)
+--------------------------------------------------------------------------------
+
+STANDARD THERMODYNAMIC DATA (298 K, 1 bar)
+--------------------------------------------------------------------------------
+
+Species    ΔH°f (kJ/mol)        S° (J/mol·K)        
+---------- -------------------- --------------------
+N₂(g)      0.0000               190.5662            
+H₂(g)      0.0000               130.4449            
+NH₃(g)     -45.8928             189.5272            
+
+--------------------------------------------------------------------------------
+HEAT CAPACITY COEFFICIENTS
+--------------------------------------------------------------------------------
+
+Cp(T) = a + b×T + c×T² + d×T⁻²  [J/(mol·K), T in Kelvin]
+
+IMPORTANT: Note the coefficient multipliers below!
+In Excel: Cp = a + b*T/1000 + c*T^2/1000000 + d*100000/T^2
+
+Species    a               b(×10³)         c(×10⁶)         d(×10⁻⁵)       
+---------- --------------- --------------- --------------- ---------------
+N₂(g)      29.104779       -1.551171       0.798830        -2.851431      
+H₂(g)      33.692647       -11.682642      11.630149       -2.752155      
+NH₃(g)     19.585462       49.911509       -15.628161      1.897953       
+
+--------------------------------------------------------------------------------
+CONSTANTS
+--------------------------------------------------------------------------------
+
+Gas constant: R = 8.314 J/(mol·K)
+
+--------------------------------------------------------------------------------
+KEY FORMULAS FOR SPREADSHEET IMPLEMENTATION
+--------------------------------------------------------------------------------
+
+1. Heat capacity: Cp(T) = a + b*T/1000 + c*T^2/1000000 + d*100000/T^2
+2. Reaction ΔCp: ΔCp(T) = 2*Cp(NH₃) - [Cp(N₂) + 3*Cp(H₂)]
+3. Trapezoidal area: Area = 0.5*(f[i] + f[i+1])*ΔT
+4. Cumulative sum: =SUM($G$2:G2) format (expands as you copy down)
+5. Final ΔG: =ΔH - T*ΔS/1000 (convert J to kJ for entropy term)
+
+--------------------------------------------------------------------------------
+YOUR ASSIGNMENT
+--------------------------------------------------------------------------------
+
+1. Calculate ΔH°₂₉₈, ΔS°₂₉₈, and ΔG°₂₉₈ from standard data
+
+2. Calculate ΔG at 61 temperatures from 300 K to 900 K (every 10 K):
+   - Use Shomate equation to calculate Cp(T) for each species
+   - Calculate ΔCp(T) for the reaction
+   - Integrate using trapezoidal rule to get ΔH(T) and ΔS(T)
+   - Calculate ΔG(T) = ΔH(T) - T×ΔS(T)
+
+3. Create two plots:
+   - Plot 1: ΔG vs. Temperature
+   - Plot 2: ΔH and T×ΔS vs. Temperature
+
+4. Find the transition temperature where ΔG = 0
+
+5. Answer analysis questions in your report
+
+See problem statement for detailed instructions and report requirements.
+================================================================================
