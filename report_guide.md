@@ -19,7 +19,7 @@ Plot of ΔG vs. Temperature with clearly marked T₀
 Table showing ΔG values at key temperatures (298 K, T₀-50K, T₀, T₀+50K)
 
 
-#### 3.0 Kinetic Considerations (1 page)
+#### 3.0 Kinetic Considerations 
 
 ##### 3.1 Rate Enhancement Analysis
 
