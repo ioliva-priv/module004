@@ -1,4 +1,4 @@
-# Module 5: Reaction Spontaneity Analysis
+# Module 4: Reaction Spontaneity Analysis
 ## Temperature-Dependent Thermodynamics and Process Optimization
 
 ---
